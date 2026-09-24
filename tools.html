@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete AI Tools Directory 2026 - XploreTechAI</title>
+    <meta name="description" content="Comprehensive directory of 500+ AI tools with detailed reviews, comparisons, and practical use cases for 2026.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f766e;
+            --secondary: #1d4ed8;
+            --accent: #06b6d4;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+            --text: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(15, 118, 110, 0.3);
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            background: linear-gradient(135deg, #0f172a 0%, var(--primary) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* FILTERS */
+        .filters {
+            background: var(--light);
+            padding: 30px 0;
+            margin: 30px 0;
+            border-radius: 12px;
+        }
+
+        .filter-content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .filter-group select, .filter-group input {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: white;
+        }
+
+        /* TOOLS GRID */
+        .tools-directory {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .tool-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 12px 30px rgba(15, 118, 110, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .tool-name {
+            flex: 1;
+        }
+
+        .tool-name h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .tool-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .tool-rating {
+            text-align: right;
+        }
+
+        .stars {
+            color: var(--warning);
+            font-size: 1.1rem;
+        }
+
+        .rating-num {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .tool-description {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .tool-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 12px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .meta-value {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .tool-footer {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tool-link {
+            flex: 1;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .tool-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .favorite-btn {
+            padding: 8px 12px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .favorite-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* PAGINATION */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 40px 0;
+        }
+
+        .pagination a, .pagination span {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+        }
+
+        .pagination a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .pagination .active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .filter-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .tools-directory {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container" style="width: 100%;">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">⚡</div>
+                    <span>XploreTechAI</span>
+                </a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="#guides">Guides</a>
+                </nav>
+                <a href="index.html#newsletter" class="btn">Newsletter</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Complete AI Tools Directory 2026</h1>
+            <p>Explore 500+ AI tools across all categories with detailed reviews, comparisons, and recommendations</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <!-- FILTERS -->
+        <div class="filters">
+            <div class="filter-content">
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option>All Categories</option>
+                        <option>Writing & Content</option>
+                        <option>Image Generation</option>
+                        <option>Video Generation</option>
+                        <option>Coding & Development</option>
+                        <option>Research & Analysis</option>
+                        <option>Business & Productivity</option>
+                        <option>Marketing & Growth</option>
+                        <option>Education & Learning</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="pricing">Pricing:</label>
+                    <select id="pricing">
+                        <option>All Options</option>
+                        <option>Free</option>
+                        <option>Freemium</option>
+                        <option>Paid</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="search">Search:</label>
+                    <input type="text" id="search" placeholder="Search tools...">
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOLS GRID -->
+        <div class="tools-directory">
+            <!-- ChatGPT -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">AI Assistant</span>
+                        <h3>ChatGPT</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★★</div>
+                        <div class="rating-num">4.9/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">Advanced conversational AI with GPT-5.2 that excels at writing, coding, analysis, and creative thinking.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">$20/month</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">General Purpose</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- Claude -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">AI Assistant</span>
+                        <h3>Claude 3</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★★</div>
+                        <div class="rating-num">4.9/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">Exceptional at long-form writing, complex analysis, coding, and handling large documents with 200K context.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">$20/month</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Writing & Code</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- Midjourney -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Image Generation</span>
+                        <h3>Midjourney</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★★</div>
+                        <div class="rating-num">4.8/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">The gold standard for AI-generated art with stunning quality, perfect for concept art and creative exploration.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">$10-96/month</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Visual Art</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- Runway -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Video Generation</span>
+                        <h3>Runway</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★☆</div>
+                        <div class="rating-num">4.7/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">Leading AI video generation and editing platform with professional tools for filmmakers and creators.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">Free/Paid</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Video Creation</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- GitHub Copilot -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Developer Tools</span>
+                        <h3>GitHub Copilot</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★★</div>
+                        <div class="rating-num">4.8/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">AI pair programmer that accelerates coding with real-time completions and function generation.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">$10/month</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Coding</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- Perplexity AI -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Research</span>
+                        <h3>Perplexity AI</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★☆</div>
+                        <div class="rating-num">4.7/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">Next-gen research engine combining real-time web search with AI reasoning for cited, reliable answers.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">Free/Pro</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Research</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- Adobe Firefly -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Design</span>
+                        <h3>Adobe Firefly</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★☆</div>
+                        <div class="rating-num">4.6/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">Seamless AI integration into Adobe Creative Suite for generating images, adjusting styles, and speeding up workflows.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">Included in CC</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Design</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- Canva AI -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Design</span>
+                        <h3>Canva AI</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★☆</div>
+                        <div class="rating-num">4.5/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">Fast and intuitive AI features for creating social media graphics, presentations, and branding materials.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">Free/Premium</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Quick Design</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- Surfer SEO -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Marketing</span>
+                        <h3>Surfer SEO</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★☆</div>
+                        <div class="rating-num">4.6/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">AI-powered SEO tool for optimizing content, improving keyword usage, and increasing search visibility.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">$49-149/month</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Content Marketing</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+
+            <!-- HubSpot AI -->
+            <div class="tool-item">
+                <div class="tool-header">
+                    <div class="tool-name">
+                        <span class="tool-category">Business</span>
+                        <h3>HubSpot AI</h3>
+                    </div>
+                    <div class="tool-rating">
+                        <div class="stars">★★★★☆</div>
+                        <div class="rating-num">4.5/5</div>
+                    </div>
+                </div>
+                <p class="tool-description">Comprehensive AI features integrated into the HubSpot CRM for marketing automation and analytics.</p>
+                <div class="tool-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Pricing</span>
+                        <span class="meta-value">Varies</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Best For</span>
+                        <span class="meta-value">Business Growth</span>
+                    </div>
+                </div>
+                <div class="tool-footer">
+                    <a href="#" class="tool-link">Visit Site</a>
+                    <button class="favorite-btn">♥</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+            <span class="active">1</span>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">...</a>
+            <a href="#">50</a>
+            <a href="#">Next →</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 XploreTechAI. All rights reserved.</p>
+        <p>Making AI accessible and practical for everyone.</p>
+    </footer>
+
+    <script>
+        // Search functionality
+        document.getElementById('search').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            document.querySelectorAll('.tool-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        // Favorite button functionality
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.style.color = btn.style.color === 'rgb(15, 118, 110)' ? 'inherit' : '#0f766e';
+                btn.textContent = btn.style.color === 'rgb(15, 118, 110)' ? '♥' : '♡';
+            });
+        });
+    </script>
+</body>
+</html>
